@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.github.bordertech.taskmaster</groupId>
+	<name>cache-helper</name>
+	<artifactId>cache-helper</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<parent>
+		<groupId>com.github.bordertech.common</groupId>
+		<artifactId>qa-parent</artifactId>
+		<version>1.0.19</version>
+	</parent>
+
+	<packaging>jar</packaging>
+
+	<properties>
+		<bt.qa.skip>false</bt.qa.skip>
+	</properties>
+
+	<description>
+		Provides a helper for creating caches (JSR107)
+	</description>
+
+	<url>https://github.com/bordertech/java-cache-helper</url>
+
+	<scm>
+		<url>https://github.com/bordertech/java-cache-helper</url>
+		<connection>scm:git:https://github.com/bordertech/java-cache-helper.git</connection>
+		<developerConnection>scm:git:https://github.com/bordertech/java-cache-helper.git</developerConnection>
+		<tag>cache-helper-1.0.0</tag>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/bordertech/java-cache-helper/issues</url>
+	</issueManagement>
+
+	<ciManagement>
+		<system>Github Actions</system>
+		<url>https://github.com/BorderTech/java-cache-helper/actions</url>
+	</ciManagement>
+
+	<dependencies>
+
+		<!-- Caching API. -->
+		<dependency>
+			<groupId>javax.cache</groupId>
+			<artifactId>cache-api</artifactId>
+			<version>1.1.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Didums Injection -->
+		<dependency>
+			<groupId>com.github.bordertech.didums</groupId>
+			<artifactId>didums-core</artifactId>
+			<version>1.0.5</version>
+		</dependency>
+
+		<!-- Servlet Interface -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+</project>
