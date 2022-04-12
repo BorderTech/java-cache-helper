@@ -1,18 +1,24 @@
 package com.github.bordertech.taskmaster.cache;
 
 import javax.cache.Cache;
+import javax.cache.CacheManager;
 import javax.cache.configuration.Configuration;
 import javax.cache.expiry.Duration;
 
 /**
  * Caching helper provider based on JSR 107.
  * <p>
- * Allows projects to provide a different mechanism for creating their cache requirements.
+ * Allows projects to provide a central mechanism for creating their cache requirements.
  * </p>
  *
  * @author jonathan
  */
 public interface CachingHelperProvider {
+
+	/**
+	 * @return the backing cache manager
+	 */
+	CacheManager getCacheManager();
 
 	/**
 	 * Close and release the cache resources.

@@ -25,7 +25,7 @@ public final class CachingProperties {
 	 * @return the config XML location
 	 */
 	public static String getConfigXmlLocation() {
-		return get().getString("bordertech.taskmaster.cache.config", "/tm-cache.xml");
+		return getConfig().getString("bordertech.taskmaster.cache.config", "/tm-cache.xml");
 	}
 
 	/**
@@ -58,14 +58,14 @@ public final class CachingProperties {
 	 * @return the default duration amount
 	 */
 	private static Long getDefaultDurationAmount() {
-		return get().getLong(DEFAULT_PREFIX + AMOUNT, Long.valueOf("1800"));
+		return getConfig().getLong(DEFAULT_PREFIX + AMOUNT, Long.valueOf("1800"));
 	}
 
 	/**
 	 * @return the default time unit
 	 */
 	private static TimeUnit getDefaultDurationUnit() {
-		String paramUnit = get().getString(DEFAULT_PREFIX + UNIT);
+		String paramUnit = getConfig().getString(DEFAULT_PREFIX + UNIT);
 		return convertParamToTimeUnit(paramUnit, TimeUnit.SECONDS);
 	}
 
@@ -75,7 +75,7 @@ public final class CachingProperties {
 	 * @return the cache duration amount
 	 */
 	private static Long getCacheDurationAmount(final String cacheName, final Long defaultAmount) {
-		return get().getLong(getCachePrefix(cacheName) + AMOUNT, defaultAmount);
+		return getConfig().getLong(getCachePrefix(cacheName) + AMOUNT, defaultAmount);
 	}
 
 	/**
@@ -84,7 +84,7 @@ public final class CachingProperties {
 	 * @return the cache time unit
 	 */
 	private static TimeUnit getCacheDurationUnit(final String cacheName, final TimeUnit defaultUnit) {
-		String paramUnit = get().getString(getCachePrefix(cacheName) + UNIT);
+		String paramUnit = getConfig().getString(getCachePrefix(cacheName) + UNIT);
 		return convertParamToTimeUnit(paramUnit, defaultUnit);
 	}
 
@@ -121,8 +121,6 @@ public final class CachingProperties {
 				return TimeUnit.SECONDS;
 			case "mi":
 				return TimeUnit.MILLISECONDS;
-			case "n":
-				return TimeUnit.NANOSECONDS;
 			default:
 				return defaultUnit;
 		}
@@ -133,7 +131,7 @@ public final class CachingProperties {
 	 *
 	 * @return the Configuration instance.
 	 */
-	private static Configuration get() {
+	private static Configuration getConfig() {
 		return Config.getInstance();
 	}
 

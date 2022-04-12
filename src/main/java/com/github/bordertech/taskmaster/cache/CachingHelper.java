@@ -9,7 +9,7 @@ import javax.cache.expiry.Duration;
 /**
  * Caching helper based on JSR 107.
  * <p>
- * Allows projects to provide a different mechanism for creating their cache requirements.
+ * Allows projects to provide a central mechanism for creating their cache requirements.
  * </p>
  *
  * @author jonathan
