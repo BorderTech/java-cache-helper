@@ -31,6 +31,13 @@ public class CachingHelperProviderDefaultTest {
 	}
 
 	@Test
+	public void testCloseManager() {
+		Assert.assertFalse("Backing cache manager should be open by default", provider.getCacheManager().isClosed());
+		provider.closeCacheManager();
+		Assert.assertTrue("Backing cache manager should be closed", provider.getCacheManager().isClosed());
+	}
+
+	@Test
 	public void testGetCacheManager() {
 		Assert.assertSame("Backing cache manager should be the default manager", Caching.getCachingProvider().getCacheManager(), provider.getCacheManager());
 	}
