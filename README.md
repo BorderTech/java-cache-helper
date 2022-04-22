@@ -7,8 +7,7 @@
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=BorderTech_java-cache-helper&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=BorderTech_java-cache-helper)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=BorderTech_java-cache-helper&metric=coverage)](https://sonarcloud.io/summary/new_code?id=BorderTech_java-cache-helper)
 [![Javadocs](https://www.javadoc.io/badge/com.github.bordertech.taskmaster/cache-helper.svg)](https://www.javadoc.io/doc/com.github.bordertech.taskmaster/cache-helper)
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.bordertech.taskmaster/cache-helper.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.bordertech.taskmaster%22%20AND%20a:%cache-helper%22)
-
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.bordertech.taskmaster/cache-helper.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.bordertech.taskmaster%22%20AND%20a:%22cache-helper%22)
 
 ## Content
 
@@ -53,20 +52,6 @@ Add a [JSR107 cache implementation](https://jcp.org/aboutJava/communityprocess/i
      <groupId>org.ehcache</groupId>
      <artifactId>ehcache</artifactId>
      <version>LATEST</version>
-  </dependency>
-  ....
-</project>
-```
-
-Some JSR107 implementations also require the JSR107 cache API dependency:
-
-``` xml
-<project>
-  ....
-  <dependency>
-      <groupId>javax.cache</groupId>
-      <artifactId>cache-api</artifactId>
-      <version>1.1.0</version>
   </dependency>
   ....
 </project>
